@@ -42,9 +42,17 @@ const styles = StyleSheet.create({
   },
   btnArea:{
     flexDirection:'row',
-    marginTop:130
+    marginTop:130,
+    height:40
   },
   btn:{
+    flex:1,
+    justifyContent:'center',
+    alignItems: 'center',
+    backgroundColor:'#fff',
+    height:50,
+    margin:17,
+    borderRadius:10
 
   },
   btnText:{
