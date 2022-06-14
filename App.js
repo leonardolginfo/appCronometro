@@ -1,22 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default function App() {
+const [crono, setCrono]=useState(0);
+  function iniciar(){
+
+  }
+
+  function parar(){
+    
+  }
+
   return (
     <View style={styles.container}>
      <Image 
      source={require('./src/crono.png')}
      />
-     <Text style={styles.timer}>00:00:00</Text>
+     <Text style={styles.timer}>{crono}</Text>
 
      <View style={styles.btnArea}>
         <TouchableOpacity style={styles.btn}>
-          <Text style={styles.btnText}>INICIAR</Text>
+          <Text style={styles.btnText} onPress={iniciar}>INICIAR</Text>
         </TouchableOpacity>
 
         <TouchableOpacity  style={styles.btn}>
-          <Text style={styles.btnText}>PARAR</Text>
+          <Text style={styles.btnText} onPress={parar}>PARAR</Text>
         </TouchableOpacity>
      </View>
      
