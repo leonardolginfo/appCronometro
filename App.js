@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
@@ -8,6 +8,17 @@ export default function App() {
      <Image 
      source={require('./src/crono.png')}
      />
+     <Text style={styles.timer}>00:00:00</Text>
+
+     <View style={styles.btnArea}>
+        <TouchableOpacity style={styles.btn}>
+          <Text style={styles.btnText}>INICIAR</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.btn}>
+          <Text style={styles.btnText}>PARAR</Text>
+        </TouchableOpacity>
+     </View>
      
      
       <StatusBar style="auto" />
@@ -23,4 +34,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#00aeef'
   },
+  timer:{
+    marginTop:-170,
+    fontSize:45,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
+  btnArea:{
+    flexDirection:'row',
+    marginTop:130
+  },
+  btn:{
+
+  },
+  btnText:{
+
+  }
 });
