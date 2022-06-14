@@ -20,6 +20,11 @@ export default function App() {
         </TouchableOpacity>
      </View>
      
+     <View style={styles.areaUltimoTempo}>
+        <Text style={styles.textAreaUltimoTempo}>
+         Último tempo: 00:00:00   
+        </Text>
+     </View>
      
       <StatusBar style="auto" />
     </View>
@@ -56,6 +61,17 @@ const styles = StyleSheet.create({
 
   },
   btnText:{
-
+    fontSize:20,
+    fontWeight:'bold',
+    color:'#00aeef'
+  },
+  areaUltimoTempo:{
+    marginTop:50   
+  },
+  textAreaUltimoTempo:{
+    fontSize:25,
+    color:'#fff',
+    fontWeight:'bold',
+    fontStyle:'italic',
   }
 });
